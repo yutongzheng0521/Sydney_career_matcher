@@ -15,8 +15,8 @@ Third-party libs: None (Ed-safe).
 
 I/O: JSON data files, text report, CSV history.
 
-1) How to Run
-# in the project root
+# 1) How to Run
+in the project root
 python3 main.py
 
 
@@ -28,7 +28,7 @@ Answer a Likert 1–5 survey.
 
 Receive Top-K careers with reasons, plus a saved report.
 
-2) Project Structure
+# 2) Project Structure
 career_matcher/
 ├─ main.py                # CLI entry; config load, input flow, reporting
 ├─ models.py              # dataclasses: Question, UserProfile, Preferences
@@ -40,7 +40,8 @@ career_matcher/
 ├─ config.json            # (optional) mode/top_k/report_dir
 └─ README.md
 
-3) Features
+
+# 3) Features
 
 Survey → Traits: computes six normalized traits
 E (Extraversion), C (Conscientiousness), O (Openness), A (Agreeableness), N (Emotional Stability), M (Analytical Mindset).
@@ -59,7 +60,7 @@ Min–Max normalization: scores printed as 0..1 for easy comparison.
 
 Reports & history: saves reports/report.txt and appends to history.csv.
 
-4) Configuration (optional)
+# 4) Configuration (optional)
 
 config.json (auto-loaded with defaults if absent):
 
@@ -69,7 +70,7 @@ config.json (auto-loaded with defaults if absent):
   "report_dir": "reports"    // output folder for report.txt
 }
 
-5) Data Formats
+# 5) Data Formats
 data/questions.json
 [
   {"id": 1, "text": "I enjoy focusing...", "trait": "M", "reverse": false}
@@ -95,7 +96,7 @@ weights map traits to importance (negative means a trait tends to hurt fit).
 
 preferences describe what the career typically values (used for small tie-break).
 
-6) Advanced Concepts 
+# 6) Advanced Concepts 
 
 OOP (classes & composition): dataclasses for domain models; Strategy Pattern to swap scorers (WeightedScorer / CosineScorer).
 
@@ -107,7 +108,7 @@ Algorithm design: scoring, min–max normalization, ranking, and explanation gen
 
 (Optional engineering): logging for key steps.
 
-7) What’s Produced
+# 7) What’s Produced
 
 Terminal summary: trait bars, Top-K, explanations.
 
