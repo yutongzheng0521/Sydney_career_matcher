@@ -1,0 +1,15 @@
+[
+  {"id": 1,  "text": "I enjoy focusing for long periods on abstract problems.",            "trait": "M", "reverse": false},
+  {"id": 2,  "text": "I prefer work that involves frequent interaction with people.",       "trait": "E", "reverse": false},
+  {"id": 3,  "text": "I often make plans and stick to them carefully.",                      "trait": "C", "reverse": false},
+  {"id": 4,  "text": "I like trying new ideas and unconventional approaches.",               "trait": "O", "reverse": false},
+  {"id": 5,  "text": "Uncertainty easily makes me anxious.",                                 "trait": "N", "reverse": true},
+  {"id": 6,  "text": "I prefer collaborating with others rather than working alone.",        "trait": "A", "reverse": false},
+  {"id": 7,  "text": "I am usually proactive in social situations.",                         "trait": "E", "reverse": false},
+  {"id": 8,  "text": "I break complex problems into actionable steps.",                      "trait": "M", "reverse": false},
+  {"id": 9,  "text": "I am willing to spend time on careful checks to ensure quality.",      "trait": "C", "reverse": false},
+  {"id": 10, "text": "I’m very interested in art, design, or creative expression.",          "trait": "O", "reverse": false},
+  {"id": 11, "text": "I can remain calm and steady under pressure.",                         "trait": "N", "reverse": false},
+  {"id": 12, "text": "I am good at coordinating and communicating across teams.",            "trait": "A", "reverse": false}
+]
+

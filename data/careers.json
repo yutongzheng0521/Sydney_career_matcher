@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Data Analyst",
+    "weights": {"M": 0.40, "C": 0.30, "O": 0.15, "E": 0.05, "A": 0.05, "N": -0.05},
+    "preferences": {"salary": 0.8, "stability": 0.7, "creativity": 0.3, "social": 0.3},
+    "desc": "Logical analysis, structured thinking, and business communication."
+  },
+  {
+    "name": "Software Engineer",
+    "weights": {"M": 0.45, "C": 0.25, "O": 0.20, "E": 0.03, "A": 0.02, "N": -0.05},
+    "preferences": {"salary": 0.8, "stability": 0.6, "creativity": 0.4, "social": 0.2},
+    "desc": "Implementation, debugging, and systematic problem solving."
+  },
+  {
+    "name": "Product Manager",
+    "weights": {"E": 0.30, "C": 0.25, "O": 0.20, "A": 0.15, "M": 0.10, "N": -0.10},
+    "preferences": {"salary": 0.7, "stability": 0.5, "creativity": 0.6, "social": 0.8},
+    "desc": "Cross-team communication, requirement abstraction, and trade-offs."
+  },
+  {
+    "name": "UX / Interaction Designer",
+    "weights": {"O": 0.40, "A": 0.20, "C": 0.15, "E": 0.10, "M": 0.10, "N": -0.05},
+    "preferences": {"salary": 0.6, "stability": 0.4, "creativity": 0.9, "social": 0.6},
+    "desc": "User-centred design, prototyping, and usability testing."
+  },
+  {
+    "name": "Teaching / Training",
+    "weights": {"A": 0.30, "E": 0.25, "C": 0.20, "O": 0.15, "M": 0.05, "N": -0.05},
+    "preferences": {"salary": 0.4, "stability": 0.7, "creativity": 0.5, "social": 0.8},
+    "desc": "Clear communication, patience, and structured explanation."
+  },
+  {
+    "name": "Marketing / Sales",
+    "weights": {"E": 0.45, "A": 0.25, "O": 0.15, "C": 0.10, "M": 0.05, "N": -0.10},
+    "preferences": {"salary": 0.9, "stability": 0.3, "creativity": 0.6, "social": 0.9},
+    "desc": "Interpersonal influence, persuasion, and goal orientation."
+  }
+]
+
