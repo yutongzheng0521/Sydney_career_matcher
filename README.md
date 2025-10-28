@@ -1,8 +1,12 @@
 # Sydney_career_matcher
 Personality-based career recommendation system for COMP project.
+
 Author: yutong zheng
+
 Email: yzhe0888@uni.sydney.edu.au
+
 Date: October 10-28, 2025
+
 Course: COMP9001 - The University of Sydney
 
 Personality → Career Matcher
@@ -29,6 +33,7 @@ Answer a Likert 1–5 survey.
 Receive Top-K careers with reasons, plus a saved report.
 
 # 2) Project Structure
+<pre>
 career_matcher/
 ├─ main.py                # CLI entry; config load, input flow, reporting
 ├─ models.py              # dataclasses: Question, UserProfile, Preferences
@@ -39,7 +44,7 @@ career_matcher/
 │  └─ careers.json        # career weights + preference profile
 ├─ config.json            # (optional) mode/top_k/report_dir
 └─ README.md
-
+</pre>
 
 # 3) Features
 
@@ -60,28 +65,29 @@ Min–Max normalization: scores printed as 0..1 for easy comparison.
 
 Reports & history: saves reports/report.txt and appends to history.csv.
 
-# 4) Configuration (optional)
-
-config.json (auto-loaded with defaults if absent):
-
+<h3>4) Configuration (optional)</h3>
+<p><code>config.json</code> (auto-loaded with defaults if absent):</p>
+<pre>
 {
   "mode": "weighted",        // or "cosine"
   "top_k": 3,                // number of recommendations to show
   "report_dir": "reports"    // output folder for report.txt
 }
+</pre>
 
-# 5) Data Formats
-data/questions.json
+<h3>5) Data Formats</h3>
+
+<p><strong>data/questions.json</strong></p>
+<pre>
 [
-  {"id": 1, "text": "I enjoy focusing...", "trait": "M", "reverse": false}
+  { "id": 1, "text": "I enjoy focusing...", "trait": "M", "reverse": false }
 ]
+</pre>
+<p><em>trait ∈ {E,C,O,A,N,M}</em></p>
+<p><em>reverse: true means the item is reverse-scored (5→1, 4→2, …).</em></p>
 
-
-trait ∈ {E,C,O,A,N,M}
-
-reverse: true means the item is reverse-scored (5→1, 4→2, …).
-
-data/careers.json
+<p><strong>data/careers.json</strong></p>
+<pre>
 [
   {
     "name": "Data Analyst",
@@ -90,6 +96,7 @@ data/careers.json
     "desc": "..."
   }
 ]
+</pre>
 
 
 weights map traits to importance (negative means a trait tends to hurt fit).
@@ -98,13 +105,13 @@ preferences describe what the career typically values (used for small tie-break)
 
 # 6) Advanced Concepts 
 
-OOP (classes & composition): dataclasses for domain models; Strategy Pattern to swap scorers (WeightedScorer / CosineScorer).
-
-File I/O & JSON parsing: loads questions/careers/config; writes report & CSV history.
-
-Exception handling & validation: robust CLI input checks; JSON schema/keys validation; friendly error messages.
-
-Algorithm design: scoring, min–max normalization, ranking, and explanation generation (strengths + watch-out + improvement tip).
+<h3>Advanced Concepts (for marking)</h3>
+<ul>
+  <li><strong>OOP (classes &amp; composition):</strong> dataclasses for domain models; <em>Strategy Pattern</em> to swap scorers (<code>WeightedScorer</code> / <code>CosineScorer</code>).</li>
+  <li><strong>File I/O &amp; JSON parsing:</strong> loads questions/careers/config; writes report &amp; CSV history.</li>
+  <li><strong>Exception handling &amp; validation:</strong> robust CLI input checks; JSON schema/keys validation; friendly error messages.</li>
+  <li><strong>Algorithm design:</strong> scoring, min–max normalization, ranking, and explanation generation (strengths + watch-out + improvement tip).</li>
+</ul>
 
 (Optional engineering): logging for key steps.
 
